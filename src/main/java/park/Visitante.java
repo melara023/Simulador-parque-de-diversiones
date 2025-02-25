@@ -8,6 +8,13 @@ public class Visitante {
     private int edad;
     private List<Boleto> listaDeBoletos;
 
+    // 🔹 Nuevo constructor que acepta boletos
+    public Visitante(String nombre, int edad, List<Boleto> boletos) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.listaDeBoletos = new ArrayList<>(boletos); // Copia la lista pasada
+    }
+
     public Visitante(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
@@ -39,5 +46,9 @@ public class Visitante {
 
     public List<Boleto>getListaDeBoletos(){
         return listaDeBoletos;
+    }
+
+    public boolean puedeEntrar(Atraccion atraccion) {
+        return this.edad >= atraccion.getEdadMinima() || tieneBoletoVIP();
     }
 }

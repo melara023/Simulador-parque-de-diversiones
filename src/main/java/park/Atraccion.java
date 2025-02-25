@@ -69,7 +69,7 @@ import java.util.List;
             }
         }
 
-        @Override
+
         public void iniciar() {
             if (!enMantenimiento) {
                 System.out.println(nombre + " ha comenzado a funcionar.");
@@ -77,16 +77,26 @@ import java.util.List;
                 System.out.println(nombre + " no puede iniciar porque está en mantenimiento.");
             }
         }
-        @Override
+
         public void detener() {
             System.out.println(nombre + " se ha detenido.");
         }
 
-        @Override
+
         public void realizarMantenimiento() {
             enMantenimiento = true;
             System.out.println(nombre + " está en mantenimiento.");
         }
+
+        public String getEstado() {
+            return enMantenimiento ? "En mantenimiento" : "Operativa";
+        }
+
+
+        public boolean puedeRecibirMasVisitantes() {
+            return visitantes.size() < capacidadMaxima; // Verifica si hay cupo disponible
+        }
+
 
     }
 
