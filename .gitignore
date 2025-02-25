@@ -31,3 +31,18 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Archivos compilados de Maven ###
+*.Jar
+*.war
+*.ear
+
+### Archivos del sistema ###
+.DS_Store
+Thumbs.db
+
+### Logs y archivos temporales ###
+logs/
+*.log
+*.tmp
+hs_err_pid*
