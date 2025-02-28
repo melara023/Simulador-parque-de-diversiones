@@ -32,3 +32,14 @@ usando IntelliJ IDEA, abrimos el proyecto y nos aseguramos de que esté configur
 3- ejecutamos el simulador desde la terminal utilizando el siguiente comando 
 java -cp bin park.TestPark
 o simplemente ejecutando el TestPark.Java
+
+----- PRUEBAS UNITARIAS -----
+La investigación también cuenta con prebas unitarias desarrolladas con JUnit5, estas están ubicadas en la carpeta 
+src/test/java/park/. El principal objetivo de estas pruebas es verificar el correcto funcionamiento de las clases principales
+como "Atracción", "Boleto", "Visitante", "ParqueDIversiones"
+
+Con el desarrollo de estas pruebas validamos los siguientes requerimientos: 
+ 1- Restricciones de edad para acceder a las atracciones.
+ 2- Asignación correcta de visitantes a las atracciones.
+ 3- Funcionamiento de boletos VIP y su acceso especial.
+ 4- Capacidad máxima de las atracciones y reubicación de visitantes.
