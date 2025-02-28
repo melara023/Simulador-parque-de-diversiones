@@ -97,6 +97,10 @@ import java.util.List;
             return visitantes.size() < capacidadMaxima; // Verifica si hay cupo disponible
         }
 
+        public List<Visitante> getVisitantes() {
+            return new ArrayList<>(visitantes); // Devuelve una copia para evitar modificaciones externas
+        }
+
 
     }
 
